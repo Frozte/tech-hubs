@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tech Job Insights</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-  <title>Our Team</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="../static/img/favicon.png" rel="icon">
@@ -24,7 +26,7 @@
   <link href="../static/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="../static/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="../static/vendor/aos/aos.css" rel="stylesheet">
-
+  
   <!-- Template Main CSS File -->
   <link href="../static/css/style.css" rel="stylesheet">
 
@@ -50,8 +52,8 @@
 
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
-          <li><a href="/">Home</a></li>       
-          <li class="active"><a href="#">Team</a></li>
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="team">Team</a></li>
           <li class="drop-down"><a href="">Interactive Data</a>
             <ul>
               <li><a href="map">Tech Hub Map Data</a></li>
@@ -60,124 +62,92 @@
           </li>
         </ul>
       </nav><!-- .nav-menu -->
-    </div>
-  </header><!-- End Header -->
 
     </div>
   </header><!-- End Header -->
 
   <main id="main">
 
-    <!-- ======= Our Team Section ======= -->
+    <!-- ======= About Us Section ======= -->
     <section class="breadcrumbs">
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Our Team</h2>
+          <h2>Technology Occupation Insights</h2>
           <ol>
             <li><a href="/">Home</a></li>
-            <li>Our Team</li>
+            <li>Technology Occupation Insights</li>
           </ol>
         </div>
 
       </div>
-    </section><!-- End Our Team Section -->
+    </section><!-- End About Us Section -->
 
-    <!-- ======= Team Section ======= -->
-    <section class="team" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+    <!-- ======= About Section ======= -->
+    <section class="about" data-aos="fade-up">
+      <div class="container">
+        <div class="row">
+          <!-- ======= Visualization ======= -->
+          <div class="col-md-6">
+            <div class="showcase__section" id="bubble">
+              <div class="spacer --small"></div>
+                <div id="bubbleplots"style="width: 900px; height: 500px;>
+                  <div class="bubbleplot" data-num="0">
+                    <div class="plot" id="plotdiv"></div>
+                    <div class="control-row">
+                    Tech Occupation: <select class="jobdata">
+                    </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <!-- ======= Visualization ======= -->
+          <div class="col-md-6">
+            <div id="chart_div" style="width: 900px; height: 500px;"></div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section class="facts section-bg" data-aos="fade-up">
       <div class="container">
 
-        <div class="row">
+        <div class="row counters">
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <div class="member-img">
-                <img src="../static/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="https://www.linkedin.com/in/stephanocastro/"><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Stephano Castro</h4>
-                <span>CHIEF OPERATING OFFICER</span>
-                <p>Aspiring Data Scientist with a background in Sustainability Science. Loves to play soccer, swim, ski, hike and spend time with family and friends.</p>
-              </div>
-            </div>
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">531,200</span>
+            <p>Projection of New Tech Jobs</p>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <div class="member-img">
-                <img src="../static/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="https://www.linkedin.com/in/joshuacoronel/"><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Joshua Coronel</h4>
-                <span>CHIEF EXECUTIVE OFFICER</span>
-                <p>*Tired of everyone's complaining*</p>
-              </div>
-            </div>
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">88,240</span>
+            <p>Mean Annual Salary</p>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <div class="member-img">
-                <img src="../static/img/team/team-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="https://www.linkedin.com/in/dalialima/"><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Dalia Lima</h4>
-                <span>CHIEF COMMERCIAL OFFICER</span>
-                <p>The Dalai Lama</p>
-              </div>
-            </div>
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">11</span>
+            <p>Percent Job Growth in 2029</p>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <div class="member-img">
-                <img src="../static/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="https://www.linkedin.com/in/keana-m/"><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Keana Mabilog</h4>
-                <span>CHIEF INFORMATION OFFICER</span>
-                <p>*Likes eggs*</p>
-              </div>
-            </div>
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">5</span>
+            <p>States considered today's Top Tech Hubs </p>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <div class="member-img">
-                <img src="../static/img/team/team-5.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="https://www.linkedin.com/in/deep-patel-79082494/"><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Deep Patel</h4>
-                <span>CHIEF TECHNOLOGY OFFICER</span>
-                <p>I just want this to be over</p>
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>
-    </section><!-- End Team Section -->
+    </section><!-- End Facts Section -->
 
-  </main><!-- End #main -->
-
+    
   <!-- ======= Footer ======= -->
   <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-
     <div class="container">
       <div class="copyright">
         &copy; Copyright <strong><span>Group Tres Leches</span></strong>. All Rights Reserved
@@ -205,6 +175,18 @@
   <script src="../static/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="../static/vendor/aos/aos.js"></script>
+  
+  <!-- Plotly/D3 JS File -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!-- Chart/Loader JS File -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <!-- Tech Data JS File -->
+  <script src="../static/js/tech_jobs.js"></script>
+  <script src="../static/js/tech_job_tree.js"></script>
+  <script src="../static/js/tech_jobs2.js"></script>
 
   <!-- Template Main JS File -->
   <script src="../static/js/main.js"></script>

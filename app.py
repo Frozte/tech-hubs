@@ -3,7 +3,13 @@ from flask import Flask, render_template,jsonify
 import json
 from pymongo import MongoClient
 from connections import readMongoCloud
-    
+from census import readMongoCensus
+
+import os 
+
+port = int(os.environ.get('PORT', 5000)) 
+#app.run(host='0.0.0.0', port=port)
+
 # We create a Flask app
 app = Flask(__name__)
 
@@ -32,11 +38,22 @@ def team():
 def blog():
     # We hardcode some information to be returned
     return render_template('blog.html')
+	
+@app.route('/techjobs')
+def jobs():
+    # We hardcode some information to be returned
+    return render_template('jobs.html')
 
-@app.route("/readData")
-def read():
+# @app.route("/readData")
+# def read():
+#     # Replace arguments with the name of your database and collection on mongodb
+#     db_df = readMongoCloud("techjobs","techjobs")
+#     return jsonify(db_df.to_dict('records'))
+
+@app.route("/censusData")
+def readCensus():
     # Replace arguments with the name of your database and collection on mongodb
-    db_df = readMongoCloud("ACSData","ACS2019_commute")
+    db_df = readMongoCensus("censusData","2019 Education Attainment")
     return jsonify(db_df.to_dict('records'))
 
 # Get setup so that if we call the app directly (and it isn't being imported elsewhere)
@@ -44,3 +61,4 @@ def read():
 # More info - https://docs.python.org/3/library/__main__.html
 if __name__ == '__main__':
     app.run(debug=True)
+    #app.run(host='0.0.0.0', port=port)

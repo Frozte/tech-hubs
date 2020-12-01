@@ -26,6 +26,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   font-family: "Roboto", sans-serif;
 }
 
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -127,6 +128,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   transition: 0.3s;
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
+  z-index:1000;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
